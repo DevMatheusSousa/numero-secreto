@@ -1,0 +1,102 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 50%, #1E3A8A 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    color: #FFFFFF;
+    overflow: hidden;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("./img/code.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(30, 58, 138, 0.9);
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4);
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+}
+
+.container__conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.container__imagem-robo {
+    width: 120px;
+    height: auto;
+    animation: float 4s ease-in-out infinite;
+}
+
+.container__informacoes {
+    text-align: center;
+}
+
+.container__texto {
+    margin: 16px 0;
+}
+
+.container__texto-azul {
+    color: #4ADE80;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 48px;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #DBEAFE;
+}
+
+.container img {
+    max-width: 100%;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
